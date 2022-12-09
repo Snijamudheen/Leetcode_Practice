@@ -27,5 +27,3 @@ cin >> rain3;
 cout << "The average rainfall for " << month1 << ", " << month2 << ", and "<< month3 << " is " << setprecision(2) << showpoint << fixed << (rain1 + rain2 + rain3) / 3.0 << " inches." << endl;
 
 }
-Footer
-© 2022 GitHub, Inc.
