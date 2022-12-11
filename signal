@@ -1,0 +1,29 @@
+/*A python program that displays instructions associated with each color of the traffic light.*/
+
+def trafficlight():
+
+    signal = input("enter the color of the traffic light: ")
+    
+    if signal not in ('RED', 'YELLOW', 'GREEN'):
+        print("Invlid color.")
+        
+    else:
+        val = light(signal)
+        if val == 0:
+            print("STOP,your life is precious.")
+        elif val == 1:
+            print("Please WAIT, till the light is Green.")
+        else:
+            print("GO thankyou for being patient")      
+        
+def light(col):
+
+    if (col == 'RED'):
+        return (0)
+    elif (col == 'YELLOW'):
+        return (1)
+    else:
+        return (2)
+    
+trafficlight()    
+print("SPEED THRILLS BUT KILLS")
