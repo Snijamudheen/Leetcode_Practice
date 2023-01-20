@@ -1,9 +1,0 @@
-/*A python program that prints the factorial of a number.*/
-
-factorial = 1
-num = int(input("enter a positive integer: "))
-
-for fac in range(1,num + 1):
-    factorial = factorial * fac
-    
-print(factorial)
