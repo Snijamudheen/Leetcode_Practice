@@ -3,12 +3,13 @@ Initially, there is a number n on the chalkboard. On each player's turn, that pl
 Choosing any x with 0 < x < n and n % x == 0. Replacing the number n on the chalkboard with n - x. Also, if a player cannot make a move, they lose the game.
 Return true if and only if Alice wins the game, assuming both players play optimally.*/
 
-class Solution {
-public:
-    bool divisorGame(int n) {
-      
-    if(n % 2 == 0)
-        return 1;
-    return 0;
-}
+class Solution 
+{
+    public:
+        bool divisorGame(int n) 
+        {
+            if(n % 2 == 0)
+                return 1;
+            return 0;
+        }
 };  
