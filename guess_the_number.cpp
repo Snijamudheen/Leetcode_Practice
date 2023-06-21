@@ -5,8 +5,8 @@
 #include <ctime>
 using namespace std;
 
-int main() {
-
+int main() 
+{
 	int num, guess, attempts = 0;
 	srand(time(0));
 	num = 1 + (rand() % 100);
@@ -14,18 +14,17 @@ int main() {
 	cout << "THE GUESSING GAME" << endl;
 	cout << "My number is between 1 and 100" << endl;
 
-	do{
-  
+	do
+	{
 		cin >> guess;
-    tries++;
+ 		tries++;
 
 		if (num < guess)
 			cout << "The number you entered is more than the given range." << endl;
 		else if (num > guess)
 			cout << "The number you entered is less than the given range." << endl;
-		else 
-		  cout << "Congratulation! You have guessed the correct number. You guessed it in " << tries << "." << endl;
+		else
+		  	cout << "Congratulation! You have guessed the correct number. You guessed it in " << tries << "." << endl;
 
 	} while (guess =! num );
-
 }
