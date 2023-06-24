@@ -2,17 +2,18 @@
 You are given an integer array heights representing the current order that the students are standing in. Each heights[i] is the height of the ith student in line (0-indexed).
 Return the number of indices where heights[i] != expected[i]. */
 
-class Solution {
-public:
-    int heightChecker(vector<int>& heights) {
-        
-        int count = 0;
-        vector<int> exp(heights.begin(), heights.end());
-        sort(exp.begin(), exp.end());
-        
-        for(int i = 0; i < heights.size(); i++)
-            if(heights[i] != exp[i])
-                count++;
-        return count;
-    }
+class Solution 
+{
+    public:
+        int heightChecker(vector<int>& heights) 
+        { 
+            int count = 0;
+            vector<int> exp(heights.begin(), heights.end());
+            sort(exp.begin(), exp.end());
+            
+            for(int i = 0; i < heights.size(); i++)
+                if(heights[i] != exp[i])
+                    count++;
+            return count;
+        }
 };
