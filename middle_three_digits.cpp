@@ -7,11 +7,16 @@ std::string middleThreeDigits(int n)
 	auto number = std::to_string(std::abs(n));
 	auto length = number.size();
 
-	if (length < 3) {
+	if (length < 3) 
+	{
 		return "less than three digits";
-	} else if (length % 2 == 0) {
+	} 
+	else if (length % 2 == 0) 
+	{
 		return "even number of digits";
-	} else {
+	} 
+	else 
+	{
 		return number.substr(length / 2 - 1, 3);
 	}
 }
@@ -22,7 +27,8 @@ int main()
 		-10001, -123, -100, 100, -12345,
 		1, 2, -1, -10, 2002, -2002, 0};
 
-	for (auto&& v : values) {
+	for (auto&& v : values) 
+	{
 		std::cout << "middleThreeDigits(" << v << "): " <<
 		middleThreeDigits(v) << "\n";
 	}
