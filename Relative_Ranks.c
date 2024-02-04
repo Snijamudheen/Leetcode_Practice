@@ -11,7 +11,7 @@ class Solution
   public:
       vector<string> findRelativeRanks(vector<int>& score) 
       {
-          unordered_map<int,int> mp;
+          unordered_map<int, int> mp;
           int n = score.size();
           vector<string> ans(score.size());
         
