@@ -2,7 +2,7 @@
 
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
-        maxSub = 0
+        maxSub = nums[0] # cuz max cannot be negative, so we assign it to the first element in the list
         currSum = 0
 
         for n in nums:
