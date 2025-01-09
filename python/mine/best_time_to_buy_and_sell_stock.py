@@ -4,16 +4,16 @@ Return the maximum profit you can achieve from this transaction. If you cannot a
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        max_profit = 0
+        l, r = 0, 1  # l = buy day, r = sell day
+        maxp = 0  # max profit we’ve seen so far
 
-        # Try every possible pair of days
-        for buy_day in range(len(prices)):
-            for sell_day in range(buy_day + 1, len(prices)):
-                # Calculate profit if you buy on 'buy_day' and sell on 'sell_day'
-                profit = prices[sell_day] - prices[buy_day]
+        while r < len(prices):  # keep going until the end of the list
+            # If the selling price is higher than the buying price
+            if prices[l] < prices[r]:
+                profit = prices[r] - prices[l]  # calculate profit
+                maxp = max(maxp, profit)  # update max profit if this profit is bigger
+            else:
+                l = r  # move the buy day to the sell day
+            r += 1  # move the sell day to the next day
 
-                # Update max_profit if this profit is bigger
-                if profit > max_profit:
-                    max_profit = profit
-
-        return max_profit
+        return maxp
