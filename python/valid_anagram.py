@@ -30,3 +30,25 @@ class Solution:
 
         # If all character counts match, return True
         return True
+
+'''
+s[0] = "l"
+
+counts["l"] = 1 + counts.get("l", 0)
+Since "l" isn’t in counts, counts.get("l", 0) returns 0.
+So, counts["l"] = 1 + 0 = 1.
+t[0] = "s"
+
+countt["s"] = 1 + countt.get("s", 0)
+Since "s" isn’t in countt, countt.get("s", 0) returns 0.
+So, countt["s"] = 1 + 0 = 1.
+Dictionaries after this iteration:
+
+counts = {"l": 1}
+countt = {"s": 1}
+
+similarly, Dictionaries after second iteration:
+
+counts = {"l": 1, "i": 1}
+countt = {"s": 1, "i": 1}
+'''
