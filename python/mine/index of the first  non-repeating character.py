@@ -1,7 +1,5 @@
-# Python program to find the index of the first 
-# non-repeating character using a nested loop
+# Python program to find the index of the first non-repeating character using a nested loop
 
-# Function to find the first non-repeating character
 def nonRepeatingChar(s):
     # Step 2: Iterate over each character in the string
     for i in range(len(s)):
