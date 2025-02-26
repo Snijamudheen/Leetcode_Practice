@@ -41,6 +41,7 @@ for i in range(N):
 # x_count = {2: 3, 3: 1, 4: 1}  (x=2 appears 3 times, x=3 appears 1 time, x=4 appears 1 time)
 # y_count = {2: 1, 6: 1, 5: 2, 8: 1}  (y=5 appears 2 times, other y's appear once)
 
+# 🚨 This is WRONG because max(x_count) returns the largest key in the dictionary, not the largest value. so use max(x_count.values()) to get the values. cuz dict = {value:key}
 # Step 3: Find the maximum number of drop points we can hit in a single straight line
 max_x_path = max(x_count.values())  # The highest number of drop points in a vertical path
 max_y_path = max(y_count.values())  # The highest number of drop points in a horizontal path
