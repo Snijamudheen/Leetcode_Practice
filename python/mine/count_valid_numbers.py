@@ -4,6 +4,8 @@
 X = int(input("Enter the maximum number (X): "))  # Read the max number (e.g., 20)
 Y = int(input("Enter the target sum of digits (Y): "))  # Read the target sum (e.g., 5)
 
+# GOAL: Count how many numbers from 0 to 20 have digits that add up to 5
+
 # Step 2: Initialize a counter to track valid numbers
 count = 0  # This variable stores how many numbers match the condition
 
