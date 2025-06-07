@@ -17,3 +17,29 @@ class Solution:
             r += 1  # move the sell day to the next day
 
         return maxp
+
+#OR
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        # Start with the highest possible value for min_price
+        # So any price in the list will be smaller and replace it
+        min_price = float('inf')  # Think of this as "infinity"
+
+        # Start with zero profit — we haven’t bought/sold anything yet
+        max_profit = 0
+
+        # Go through each price in the list
+        for price in prices:
+            if price < min_price:
+                # Found a new lower price — update our "buy" price
+                min_price = price
+            else:
+                # Price is higher than what we've seen — this could be a sell day
+                # Calculate potential profit: sell - buy
+                profit = price - min_price
+
+                # Keep track of the highest profit we've seen
+                max_profit = max(max_profit, profit)
+
+        # After checking all days, return the best profit found
+        return max_profit
