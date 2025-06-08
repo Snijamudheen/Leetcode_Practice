@@ -1,14 +1,15 @@
 # find the maximum number of drop points that can be covered by a single horizontal or vertical path.
 # User types: 10 20 30
 '''"10 20 30"
+
 .split()
 Splits the string into parts using spaces:
-
 ["10", "20", "30"]
+
 map(int, ...)
 Converts each string into an integer:
-
 map(int, ["10", "20", "30"]) → [10, 20, 30]
+
 list(...)
 Converts the map object into a list:
 x_coords = [10, 20, 30]
