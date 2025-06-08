@@ -1,4 +1,7 @@
 # find the maximum number of drop points that can be covered by a single horizontal or vertical path.
+# User types: 10 20 30
+# input().split() → ['10', '20', '30']
+# map(int, ...) → [10, 20, 30] as integers
 
 # Step 1: Read input values (pilot gets the list of drop points)
 N = int(input())  # Read the number of x-coordinates (how many drop points exist)
