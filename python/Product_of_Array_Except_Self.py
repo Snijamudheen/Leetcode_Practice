@@ -69,3 +69,42 @@ class Solution:
 
         # Step 7: Return the final result
         return result
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+def productExceptSelf(nums):
+    n = len(nums)                    
+    answer = [1] * n   # Start with [1, 1, 1, 1]
+
+    # First pass: calculate product of all elements to the LEFT of each index
+    left_product = 1
+    for i in range(n):
+        answer[i] = left_product     # Store left product at current index
+
+        # Update left_product for next index
+        left_product *= nums[i]
+
+        # Example:
+        # i = 0: answer[0] = 1, left_product = 1 * 1 = 1
+        # i = 1: answer[1] = 1, left_product = 1 * 2 = 2
+        # i = 2: answer[2] = 2, left_product = 2 * 3 = 6
+        # i = 3: answer[3] = 6, left_product = 6 * 4 = 24
+        # answer now = [1, 1, 2, 6]
+
+    # Second pass: calculate product of all elements to the RIGHT of each index
+    right_product = 1
+    for i in reversed(range(n)):
+        answer[i] *= right_product   # Multiply with right product
+
+        # Update right_product for next step to the left
+        right_product *= nums[i]
+
+        # Example:
+        # i = 3: answer[3] = 6 * 1 = 6, right_product = 1 * 4 = 4
+        # i = 2: answer[2] = 2 * 4 = 8, right_product = 4 * 3 = 12
+        # i = 1: answer[1] = 1 * 12 = 12, right_product = 12 * 2 = 24
+        # i = 0: answer[0] = 1 * 24 = 24, right_product = 24 * 1 = 24
+        # final answer = [24, 12, 8, 6]
+
+    return answer
